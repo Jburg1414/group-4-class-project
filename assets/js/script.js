@@ -1,4 +1,6 @@
-fetch("https://veriphone.p.rapidapi.com/verify?phone=5203066050", {
+var verifyphone=function(){
+    var phonenumber=document.getElementById("inputnumber").value
+fetch(`https://veriphone.p.rapidapi.com/verify?phone=${phonenumber}`, {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "veriphone.p.rapidapi.com",
@@ -13,3 +15,6 @@ fetch("https://veriphone.p.rapidapi.com/verify?phone=5203066050", {
 .catch(err => {
 	console.error(err);
 });
+}
+var verifybutton=document.getElementById("btn")
+verifybutton.addEventListener("click",verifyphone)
