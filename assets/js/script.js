@@ -11,6 +11,13 @@ fetch(`https://veriphone.p.rapidapi.com/verify?phone=${phonenumber}`, {
     return response.json()
 }).then(response => {
 	console.log(response);
+    var html=` <article class="tile is-child notification is-primary">
+    <p class="title">Phonenumber:${response.international_number}</p>
+    <p class="subtitle">Localnumber:${response.local_number}</p>
+    <p class="subtitle">Region:${response.phone_region}</p>
+    <p class="subtitle">Country:${response.country}</p>
+  </article>`
+  document.getElementById("information").innerHTML = html
 })
 .catch(err => {
 	console.error(err);
