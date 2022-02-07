@@ -12,8 +12,8 @@ fetch(`https://veriphone.p.rapidapi.com/verify?phone=${phonenumber}`, {
 }).then(response => {
 	console.log(response);
     var html=` <article class="tile is-child notification is-primary">
-    <p class="title">Phonenumber:${response.international_number}</p>
-    <p class="subtitle">Localnumber:${response.local_number}</p>
+    <p class="subtitle">Phone Number:${response.international_number}</p>
+    <p class="subtitle">Local Number:${response.local_number}</p>
     <p class="subtitle">Region:${response.phone_region}</p>
     <p class="subtitle">Country:${response.country}</p>
   </article>`
@@ -25,3 +25,5 @@ fetch(`https://veriphone.p.rapidapi.com/verify?phone=${phonenumber}`, {
 }
 var verifybutton=document.getElementById("btn")
 verifybutton.addEventListener("click",verifyphone)
+
+// api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=049fdcb7f6798f3b2a9c0c795a52058f
