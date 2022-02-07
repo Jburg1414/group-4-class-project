@@ -1,1 +1,20 @@
-# group-4-class-project
+Phone ID APPLICATION
+
+DESCRIPTION: Investigators can use our application to verify that a phone number is valid and also verify the region that phone number is belongs to within the country.
+
+TECHNOLOGIES USED
+- Bulma
+- JavaScript
+- HTML
+
+SCREENSHOTS
+
+(HERE)
+
+LIVE URL: (URL HERE)
+
+AUTHORS
+- Drew Harris
+- Gabriel Reina
+- Jace Burguess
+- Sabrina MacDonald
