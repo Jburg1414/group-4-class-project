@@ -27,3 +27,4 @@ var verifybutton=document.getElementById("btn")
 verifybutton.addEventListener("click",verifyphone)
 
 // api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=049fdcb7f6798f3b2a9c0c795a52058f
+
