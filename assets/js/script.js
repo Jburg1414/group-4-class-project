@@ -1,33 +1,29 @@
-var veriphoneKey = "1509DD13CE574F1CB5E4DBF14C7019B3";
-var openweatherKey = "8cab3bb02def5dd471eb0acffee86b41";
-var phoneInputEl = document.querySelector(".phone-number");
-var submitBtnEl = document.querySelector("#btn");
-var number = Number(phoneInputEl);
+var verifyphone=function(){
+    var phonenumber=document.getElementById("inputnumber").value
+fetch(`https://veriphone.p.rapidapi.com/verify?phone=${phonenumber}`, {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "veriphone.p.rapidapi.com",
+		"x-rapidapi-key": "9fbbd5f392mshabbee8212399231p112230jsne35da2362a26"
+	}
+})
+.then(response => {
+    return response.json()
+}).then(response => {
+	console.log(response);
+    var html=` <article class="tile is-child notification is-primary">
+    <p class="subtitle">Phone Number:${response.international_number}</p>
+    <p class="subtitle">Local Number:${response.local_number}</p>
+    <p class="subtitle">Region:${response.phone_region}</p>
+    <p class="subtitle">Country:${response.country}</p>
+  </article>`
+  document.getElementById("information").innerHTML = html
+})
+.catch(err => {
+	console.error(err);
+});
+}
+var verifybutton=document.getElementById("btn")
+verifybutton.addEventListener("click",verifyphone)
 
-function getNumberInfo (number) {
- return fetch(
-     `https://api.veriphone.io/v2/verify?phone=${number}&key=${veriphoneKey}`)
-        .then(function(response) {
-            console.log(response);
-            response.json().then(function (data) {
-                console.log(data);
-            });
-        });
-
-};
-
-var getWeather = function() {
-    var apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-
-    fetch(apiUrl)
-    .then(function(response) {
-        if (response.ok) {
-            console.log(response)
-            return response.json();
-        };
-    }) .then(function(data) {
-        console.log(data);
-    }) .catch(function(error) {
-        console.log(error);
-    })
-};
+// api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=049fdcb7f6798f3b2a9c0c795a52058f

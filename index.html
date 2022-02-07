@@ -7,18 +7,24 @@
     <title>Phone Number Verifier</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-
     <header class="header">Phone Number Verifier</header>
-    <input type="text" class="phone-number">
+    <input type="text" class="phone-number" id="inputnumber">
     <br />
-    <button id="btn" class="btn">Enter Phone Number</button>
+    <button id="btn" class="btn">Verify Phone Number</button>
+    <div class="firstcontainer">
+        <div class="notification is-primary" id="information">
+        </div>
+    </div>
 
-    <script src="./assets/js/jquery-3.6.0.slim.min.js"></script>
-    <script src="./assets/js/script.js" async defer></script>
-</body>
+    <div class="card-container"></div>
+
+    <section class="container">
+    </section>
+    <script src="assets/js/script.js"></script>
 
 </html>
