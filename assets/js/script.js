@@ -26,4 +26,21 @@ fetch(`https://veriphone.p.rapidapi.com/verify?phone=${phonenumber}`, {
 var verifybutton=document.getElementById("btn")
 verifybutton.addEventListener("click",verifyphone)
 
-// api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=049fdcb7f6798f3b2a9c0c795a52058f
+// function to get weather based on phone number region
+var getWeather = function() {
+    var apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${Mesa}&appid=8cab3bb02def5dd471eb0acffee86b41&units=imperial`;
+
+    fetch(apiUrl)
+    .then(function(response) {
+        if (response.ok) {
+            console.log(response)
+            return response.json();
+        };
+    }) .then(function(data) {
+        console.log(data);
+    }) .catch(function(error) {
+        console.log(error);
+    })
+};
+
+getWeather();
