@@ -34,22 +34,22 @@ function createDiv() {
   };
 
 // load numbers for the first time
-loadNumbers();
+// loadNumbers();
 
 // load phone numbers from local storage
-var loadNumbers = function() {
-    numbers = JSON.parse(localStorage.getItem("numbers"));
-};
+// var loadNumbers = function() {
+//     numbers = JSON.parse(localStorage.getItem("numbers"));
+// };
 
 var saveNumbers = function(phonenumero) {
     localStorage.setItem("numbers", phonenumero);
 };
 
-
-// function to get weather based on phone number region
+// function to get weather based on phone number location
 var getWeather = function() {
 
     var numberLocation = $("#location")
+    console.log(numberLocation);
 
     var apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${numberLocation}&appid=8cab3bb02def5dd471eb0acffee86b41&units=imperial`;
     
