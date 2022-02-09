@@ -12,12 +12,23 @@
 </head>
 
 <body>
-    <header class="header is-size-1 has-text-weight-bold">Phone Number Verifier</header>
-    <input type="text" class="phone-number" id="inputnumber">
-    <br />
-    <button id="btn" class="btn is-primary">Verify Phone Number</button>
-    <div class="firstcontainer">
-        <div class="notification is-primary" id="information">
+    <div class="header is-family-sans-serif is-flex">
+        <header class="header has-text-left">
+            <h1 class="is-size-1 has-text-weight-bold">Numchecker</h1>
+            <h2 class="is-size-4 has-text-weight-italic">Your Phone Number Verifier</h2>
+        </header>
+        <div class="has-text-centered is-large">
+            <input type="text" class="phone-number mx-2 my-2 " id="inputnumber">
+            <button id="btn" class="btn is-primary is-large is-clickable is-radiusless">Verify Phone Number</button>
+            <button onClick="createDiv()">Save as Favorite</button>
+            <div id="getText" style="display: none;">
+                928-240-0913
+    
+            </div>
+        </div>
+        <div class="firstcontainer">
+            <div class="notification is-primary" id="information">
+            </div>
         </div>
     </div>
 
@@ -27,11 +38,6 @@
     <div id="getText" style="display: none;">
         WEATHER DISPLAY
     </div>
-        <button onClick="createDiv()">Save as Favorite</button>
-        <div id="getText" style="display: none;">
-            928-240-0913
-
-        </div>
     <section class="container">
     </section>
     <script src="assets/js/script.js"></script>
