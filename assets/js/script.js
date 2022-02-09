@@ -2,7 +2,7 @@
 
 var phoneNumber = (localStorage.searchHistory) ? JSON.parse(localStorage.searchHistory) : [];
 document.querySelector(".btn").addEventListener("click", () => {
-    searchHistory.push(document.querySelector(".btn").value);
+    searchHistory.push(document.querySelector(".phone-number").value);
     localStorage.searchHistory = JSON.stringify.apply(searchHistory);
 });
 
