@@ -1,4 +1,12 @@
-var phoneNumber = document.getElementById('inputnumber').value;
+// Potential local storage script
+
+var phoneNumber = (localStorage.searchHistory) ? JSON.parse(localStorage.searchHistory) : [];
+document.querySelector(".btn").addEventListener("click", () => {
+    searchHistory.push(document.querySelector(".btn").value);
+    localStorage.searchHistory = JSON.stringify.apply(searchHistory);
+});
+
+// var phoneNumber = document.getElementById('inputnumber').value;
 
 // // load phone numbers from local storage
 //     var loadNumbers = function() {
