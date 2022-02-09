@@ -74,9 +74,6 @@ function createDiv() {
 var verifybutton=document.getElementById("btn")
 verifybutton.addEventListener("click",verifyphone)
 
-// load numbers for the first time
-loadNumbers();
-
 // load phone numbers from local storage
 var loadNumbers = function() {
     numbers = JSON.parse(localStorage.getItem("numbers"));
