@@ -14,27 +14,40 @@
 <body>
     <header class="header">Phone Number Verifier</header>
     <h4>Please enter full number, including country code, below to verify phone number!</h4>
-    <input type="text" class="phone-number" id="inputnumber">
-    <br />
-    <button id="btn" class="btn">Verify Phone Number</button>
-    <article class="firstcontainer">
-        <div class="notification is-primary" id="information">
-        </div>
-    </article>
+    <main class="is-flex-wrap">
 
-    <!-- onClick display weather widget -->
-    <button onClick="createDiv()">Check Weather</button>
-    <!-- bring weather widget contents in -->
-    <div id="getText" style="display: none;">
-        WEATHER DISPLAY
-    </div>
-        <button onClick="createDiv()">Save as Favorite</button>
-        <div id="getText" style="display: none;">
-            928-240-0913
-
+        <div>
+            <input type="text" class="phone-number" id="inputnumber">
+            <br />
+            <button id="btn" class="btn">Verify Phone Number</button>
+            <div class="firstcontainer">
+                <div class="notification is-primary" id="information">
+                </div>
+            </article>
         </div>
-    <section class="container">
-    </section>
+
+        <!-- onClick display weather widget -->
+        <div class="section is-medium">
+            <button onClick="createDiv()" id="weather">Check Weather</button>
+            <!-- bring weather widget contents in -->
+            <div class= "columns hidden" id="getText">
+                <!-- <div class="box column is-6">
+                    <h3>Current Date</h3>
+                    <p>Current Temp</p>
+                    <p>Current Wind Speed</p>
+                    <p>Current Humidity</p>
+                </div> -->
+            </div>
+            <button onClick="createDiv()">Save as Favorite</button>
+            <div id="getNumber" style="display: none;">
+                928-240-0913    
+            </div>
+        </div>
+        <section class="container">
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
