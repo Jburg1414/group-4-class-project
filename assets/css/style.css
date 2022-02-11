@@ -2,3 +2,11 @@
     height: 200px;
     width: 30%;
 }
+
+.btn {
+    border-radius: 1rem;
+}
+
+.hidden {
+    display: none;
+}
