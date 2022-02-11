@@ -1,3 +1,16 @@
+
+=======
+// Potential local storage script
+
+var phoneNumber = (localStorage.searchHistory) ? JSON.parse(localStorage.searchHistory) : [];
+document.querySelector(".btn").addEventListener("click", () => {
+    searchHistory.push(document.querySelector(".phone-number").value);
+    localStorage.searchHistory = JSON.stringify(searchHistory);
+});
+
+// var phoneNumber = document.getElementById('inputnumber').value;
+
+
 var verifyphone = function () {
   var phonenumber = document.getElementById("inputnumber").value;
   console.log(phonenumber);
