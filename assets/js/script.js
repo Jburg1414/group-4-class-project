@@ -1,15 +1,8 @@
-
-=======
-// Potential local storage script
-
-var phoneNumber = (localStorage.searchHistory) ? JSON.parse(localStorage.searchHistory) : [];
-document.querySelector(".btn").addEventListener("click", () => {
-    searchHistory.push(document.querySelector(".phone-number").value);
-    localStorage.searchHistory = JSON.stringify(searchHistory);
-});
-
-// var phoneNumber = document.getElementById('inputnumber').value;
-
+// var phoneNumber = (localStorage.searchHistory) ? JSON.parse(localStorage.searchHistory) : [];
+// document.querySelector(".btn").addEventListener("click", () => {
+//     searchHistory.push(document.querySelector(".phone-number").value);
+//     localStorage.searchHistory = JSON.stringify(searchHistory);
+// });
 
 var verifyphone = function () {
   var phonenumber = document.getElementById("inputnumber").value;
@@ -84,7 +77,7 @@ var getWeather = function () {
     .then(function (data) {
         console.log(data);
         var date = new Date(data.dt*1000).toLocaleDateString();
-        var weather = ` <div class="box column is-6">
+        var weather = `<div class="box column is-6">
         <h3>${date}</h3>
         <p>Current Temp: ${data.main.temp} ℉</p>
         <p>Current Wind Speed: ${data.wind.speed} MPH</p>

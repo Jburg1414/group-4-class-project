@@ -20,10 +20,10 @@
         <div class="has-text-centered is-large">
             <input type="text" class="phone-number mx-2 my-2 " id="inputnumber">
             <button id="btn" class="btn is-primary is-large is-clickable is-radiusless is-rounded">Verify Phone Number</button>
-            <button class="btn is-large is-clickable is-radiusless is-primary is-rounded" onClick="createDiv()">Save as Favorite</button>
-            <div id="getText" style="display: none;">
+            <!-- <button class="btn is-large is-clickable is-radiusless is-primary is-rounded" onClick="createDiv()">Save as Favorite</button> -->
+            <!-- <div id="getText" style="display: none;">
     
-            </div>
+            </div> -->
         </div>
         <br/>
 
@@ -34,11 +34,11 @@
     </div>
 
     <!-- onClick display weather widget -->
-    <button class="btn is-large is-clickable is-radiusless is-rounded" onClick="createDiv()">Check Weather</button>
+    <button id="weather" class="btn is-large is-clickable is-radiusless is-rounded" onClick="createDiv()">Check Weather</button>
     <!-- bring weather widget contents in -->
     <div id="getText" class="hidden">
     </div>
-    <section class="container is-flex">
+    <section class="container is-flex" id="getNumber">
     </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
