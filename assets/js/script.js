@@ -1,14 +1,8 @@
-// var phoneNumber = (localStorage.searchHistory) ? JSON.parse(localStorage.searchHistory) : [];
-// document.querySelector(".btn").addEventListener("click", () => {
-//     searchHistory.push(document.querySelector(".phone-number").value);
-//     localStorage.searchHistory = JSON.stringify(searchHistory);
-// });
-
 var verifyphone = function () {
   var phonenumber = document.getElementById("inputnumber").value;
   console.log(phonenumber);
   fetch(
-    `http://apilayer.net/api/validate?access_key=aaac1f9216c8aaaa4df1f2799c00507f&number=${phonenumber}`,
+    `https://apilayer.net/api/validate?access_key=aaac1f9216c8aaaa4df1f2799c00507f&number=${phonenumber}`,
     {
       method: "GET",
     }
