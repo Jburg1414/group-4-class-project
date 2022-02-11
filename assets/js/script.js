@@ -18,7 +18,7 @@ var verifyphone = function () {
     })
     .then((response) => {
       console.log(response);
-      var html = `<article class="tile is-child notification is-primary">
+      var html = `<article class="tile is-child notification">
     <p class="subtitle">Valid:${response.valid}</p>
     <p class="subtitle">Number:${response.number}</p>
     <p class="subtitle" id="location">Location:${response.location}</p>
