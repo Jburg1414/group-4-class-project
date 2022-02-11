@@ -3,6 +3,6 @@
     width: 30%;
 }
 
-.hidden {
-    display: none;
+.btn {
+    border-radius: 1rem;
 }

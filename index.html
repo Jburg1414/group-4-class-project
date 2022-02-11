@@ -12,45 +12,37 @@
 </head>
 
 <body>
-    <header class="header">Phone Number Verifier</header>
-    <br />
-    <h4>Please enter full number, including country code, below to verify phone number!</h4>
-    <main class="is-flex-wrap">
-
-    <div class="columns">
-        <div class="column" style="display:flex;flex-wrap:wrap;align-items:center;">
-            <input type="text" class="phone-number" id="inputnumber">
-            <br />
-            <button id="btn" class="btn">Verify Phone Number</button>
-            <div class="firstcontainer">
-                <div class="notification is-primary" id="information">
-                </div>
-            </article>
-        </div>
-
-        <!-- onClick display weather widget -->
-        <div class="section is-medium column" style="display:flex;flex-wrap:wrap;align-items:center;">
-            <button onClick="createDiv()" id="weather">Check Weather</button>
-            <!-- bring weather widget contents in -->
-            <div class= "columns hidden" id="getText">
-                <!-- <div class="box column is-6">
-                    <h3>Current Date</h3>
-                    <p>Current Temp</p>
-                    <p>Current Wind Speed</p>
-                    <p>Current Humidity</p>
-                </div> -->
-            </div>
-            <button onClick="createDiv()">Save as Favorite</button>
-            <div id="getNumber" style="display: none;">
+    <div class="header is-family-sans-serif is-flex">
+        <header class="header has-text-centered">
+            <h1 class="is-size-1 has-text-weight-bold">Numchecker</h1>
+            <h2 class="is-size-4 has-text-weight-italic">Your Phone Number Verifier</h2>
+        </header>
+        <div class="has-text-centered is-large">
+            <input type="text" class="phone-number mx-2 my-2 " id="inputnumber">
+            <button id="btn" class="btn is-primary is-large is-clickable is-radiusless is-rounded">Verify Phone Number</button>
+            <button class="btn is-large is-clickable is-radiusless is-primary is-rounded" onClick="createDiv()">Save as Favorite</button>
+            <div id="getText" style="display: none;">
+                928-240-0913
+    
             </div>
         </div>
-        <div class="column">
-        <section class="container">
-        </section>
+        <br/>
+
+        <div class="firstcontainer is-flex">
+            <div class="notification is-primary" id="information">
+            </div>
         </div>
     </div>
-    </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- onClick display weather widget -->
+    <button class="btn is-large is-clickable is-radiusless is-rounded" onClick="createDiv()">Check Weather</button>
+    <!-- bring weather widget contents in -->
+    <div id="getText" style="display: none;">
+        WEATHER DISPLAY
+    </div>
+    <section class="container is-flex">
+    </section>
+  
     <script src="assets/js/script.js"></script>
 </body>
 
