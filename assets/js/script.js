@@ -12,7 +12,7 @@ var verifyphone = function () {
     })
     .then((response) => {
       console.log(response);
-      var html = `<article class="tile is-child notification">
+      var html = `<article class="box is-child notification ">
     <p class="subtitle">Valid:${response.valid}</p>
     <p class="subtitle">Number:${response.number}</p>
     <p class="subtitle" id="location">Location:${response.location}</p>
@@ -31,20 +31,21 @@ var verifyphone = function () {
 
     var numbersHistory = document.getElementById("getNumber");
     numbersHistory.innerHTML = "";
+    var numberList = document.createElement("ul");
     for (var i = 0; i < saveNumbers.length; i++) {
-        var phoneHistory = document.createElement("button");
-        phoneHistory.type = "submit";
+        var phoneHistory = document.createElement("li");
+        phoneHistory.classList = "button is-outlined is-link is-small is-clickable is-rounded is-inline-block";
         phoneHistory.onclick = searchPhone;
         phoneHistory.appendChild(document.createTextNode(saveNumbers[i]));
-        numbersHistory.appendChild(phoneHistory);
+        numberList.appendChild(phoneHistory);
+        numbersHistory.appendChild(numberList);
     }
 };
 
 
 function searchPhone() {
+  $("input").focus();
     console.log(this);
-    var phonenumber = $(this).text();
-    verifyphone(phonenumber);
 }
 
 var verifybutton = document.getElementById("btn");
